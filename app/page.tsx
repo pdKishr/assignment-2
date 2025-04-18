@@ -20,31 +20,32 @@ import DealsStatics from "@/components/DealsStatics";
 
 export default function Home() {
 
- 
-  
   return (
-    <div className="h-screen overflow-auto scroll-hidden ">
+    <div className="w-full flex justify-center items-center">
+
+   
+    <div className="w-fit">
       {/* Header section*/}
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-between">
 
                       {/* Page name */}
-                      <div className="flex items-center  gap-2 justify-start w-1/3">
+                      <div className="flex  items-center  gap-2 ">
                         <Overview color={"#139E49"} />
-                        <span className="font-bold text-xl "> Overview </span>
+                        <span className="font-bold  xl:text-xl "> Overview </span>
                       </div>
 
                       {/* Search bar */}
-                      <div className="w-1/3  border border-gray-300 rounded-full px-4 py-2 flex items-center justify-start gap-2">
+                      <div className="border border-gray-300 rounded-full px-4 py-2  flex  items-center  gap-1 xl:gap-2">
                          <div><Magnifier/></div>
                         <input
                           type="text"
                           placeholder="Search here"
-                          className=" w-4/5 outline-none p-1"
+                          className="  outline-none p-1"
                         />    
                       </div>
 
                       {/* Icons */}
-                      <div className="w-1/3 flex gap-2 justify-end">
+                      <div className=" flex gap-2 ">
                         <div className="p-4 border rounded-full border-gray-300"><NewMail color={"gray"}/></div> 
                         <div className="p-4 border rounded-full border-gray-300"><Notification/></div> 
                         <Image  className="size-13 rounded-full" src={profile} alt={'Byran R. image'} />
@@ -54,28 +55,26 @@ export default function Home() {
 
       {/*Data Analytics Section - 1*/}
 
-                <div className="ml-5 my-5 flex justify-evenly gap-5">
+                <div className="ml-5 my-5 flex justify-eveny gap-5">
                       
                               <ViewDataComponent icon={ShoppingBag({ color: "white" })} title={"Total order"} amount={"$84.00K"} bgcolor={"bg-[#e8eb34]"} subtitleicon={CarretUp} subtitle={"17.33"} subtitlecolor={"black"} />
                               <ViewDataComponent icon={Clock({color:"white"})} title="Total income" amount={"$59.00K"} bgcolor={"bg-white"} subtitleicon={CarretUp}  subtitle="17.33" subtitlecolor={"#139E49"} />
                               <ViewDataComponent icon={group({color:"white"})} title="Total customers" amount={"12.00K"} bgcolor={"bg-white"} subtitleicon={CarretDown} subtitle="17.33" subtitlecolor={"red"}/>
                           
                 </div>
-
-        
+      
       {/*Data Analytics section - 2 */}
              
                <div className="ml-5 flex justify-evenly gap-5 ">
 
                   {/* Order Statistics section*/}
-                  <div className="p-5 bg-white rounded-xl w-3/5 ">
+                  <div className=" p-5 bg-white rounded-xl w-3/5 ">
                           <BarGraphSection/>  
                   </div>
 
-                  
                   {/*Customer Satisfication Section */}
 
-                  <div className=" p-5 w-2/5  justify-center items-center  bg-white rounded-xl h-90">
+                  <div className=" p-5 w-2/5  justify-center items-center  bg-white rounded-xl ">
                       <div className='pb-4 flex justify-between items-center'>
                             <div className="text-xl font-semibold">Customer Satisfaction</div>
                             <div className='flex'>
@@ -100,6 +99,7 @@ export default function Home() {
 
 
 
+    </div>
     </div>
   );
 }

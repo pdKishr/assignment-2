@@ -177,19 +177,10 @@ export default function MyStackedBar(){
        setIsOpen(!isOpen);
   }
 
-  const handleClickOutside = ()=>{
-     if(isOpen) setIsOpen(false);
-  }
-
-  useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside); 
-    };
-  }, []);
 
 
-     return<div className="w-full h-full">
+
+     return<div className="">
         
          <div className='pb-5 flex justify-between items-center'>
                                   <div className="text-xl font-semibold">Order statistics</div>
